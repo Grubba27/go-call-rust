@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	output, err := exec.Command("./rust-cli-code/target/release/rust-cli-code", "--name", "John").Output()
+	output, err := exec.Command("./rust-code/target/release/rust-code", "--name", "John").Output()
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-	fmt.Println(string(output)) // will print "Hello John!"
+	fmt.Println(string(output)) // will print "Hello, John!"
 }
